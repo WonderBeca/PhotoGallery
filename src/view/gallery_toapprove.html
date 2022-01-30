@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Photo Feed</title>
+        <link rel="stylesheet" href="../static/gallery.css">
+    </head>
+    <body>                     
+        <div class="main-menu">
+            <a class="header-link" href="/logout">Logout</a>  
+            <a class="header-link" href="/gallery/feed">Feed</a>  
+            <form style="display: flex; float: right;" class="upload-image-form" method="POST" 
+            action="/upload_image" enctype="multipart/form-data">
+                <p id="upload-image-filepath"></p>
+                <div class="upload-image btn">
+                    <input type="file" name="file" multiple="true" autocomplete="off"
+                    required value="Send">
+                </div>
+                
+                <div class="upload-image-confirmation">
+                    <input type="submit"d value="Send">
+                </div>
+            </form>                  
+        </div>
+        <h2 class="header-page">Pendent photos</h2>
+        {% for image in images %}
+        <div class="container-fluid">
+            <div class="photo">
+                <div class="box one">
+                    <div class="name">
+                        <h3>{{ images[image]["image_owner"] }}</h3>
+                        <span>{{ images[image]["upload_date"] }}</span>
+                    </div>
+                    <img src="{{ images[image]["image_link"] }}" alt="">
+                    <div style="display: flex;">
+                        {% set image_hash = images[image]["image_hash"] %}
+                        <input class="submitButton" type="submit"d value="Approve" onclick="approveImage(1, '{{image_hash}}')">
+                        <input class="submitButton" type="submit"d value="Decline" onclick="approveImage(2, '{{image_hash}}')">
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </body>
+<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../static/gallery.js"></script>
+</html>

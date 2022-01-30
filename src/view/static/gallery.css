@@ -1,0 +1,111 @@
+*{ 
+    margin: 0;
+}
+
+body{
+    background: #e8e8e8;
+}
+
+/* Div Wraps entire Html */
+.container-fluid{
+    width: 600px;
+    margin: 0 auto;
+    background-color: #eee;
+}
+
+/* Header style */
+.header{
+    padding: 10px 0px 30px 0px;
+    margin: 0 0 25px 0;
+    background: #fff; 
+    width: 100%;
+} 
+
+h1{
+    background: #fff;
+}
+
+/* text & date, above photo */
+h3, span{
+    display: inline; 
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+span{
+    float: right;
+    color: grey;
+}
+
+/* Makes images adjust to div size */
+img{
+    width: 100%;
+    object-fit: contain;
+}
+
+
+/* Class Photo style */    
+.photo{
+    background-color: #eee;
+    width: 100%;
+    height: auto; 
+    margin: 50px 0;
+}
+
+/* box style */
+.box{
+    background: #fff;
+    position: relative;
+    padding: 10px 0px 50px 0px;
+    margin: 50px 0px;
+    width: 600px;
+}
+
+.submitButton {
+    margin:auto;
+    display:flex;
+    width:180px;
+    height:60px;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    font-family: 'Righteous', cursive;
+    cursor:pointer;
+    border:none;
+    justify-content:center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    }
+
+.comment-input {
+    margin: 10px;
+}
+.comment-section {
+    margin: 10px;
+}
+.like-section {
+    margin: 10px
+}
+.main-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    font-size: 14px;
+    background: linear-gradient(120deg, rgb(135, 152, 175), rgba(146, 118, 146, 0.9), rgba(165, 115, 115, 0.89));
+    width: -moz-available;
+    z-index: 999;
+}
+.header-link {
+    color: azure;
+}
+
+.header-page {
+    color: azure;
+    text-align: center;
+    margin: 60px;
+    font-family: 'Righteous', cursive;
+    color: rgb(0, 0, 0);
+    font-size: 60px;
+}

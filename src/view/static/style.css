@@ -1,0 +1,215 @@
+body {
+  width:100%;
+  height:100vh;
+  overflow:hidden;
+  background: linear-gradient(120deg, rgba(63,130,215), rgba(128,0,128,.9), rgba(255,0,0,.9));
+  display:grid;
+  justify-content: center;
+  align-items: center;
+  cursor:default;
+}
+
+.sectionForm {
+  height:400px;
+  width: 600px;
+  background-color:#FFF;
+  box-shadow: 0 0 15px 5px rgba(0,0,0,.5);
+}
+
+#Register {
+  padding: 15px 15px 15px 15px;
+  font-family: 'Comfortaa', cursive;
+  position: relative;
+}
+
+.inputSection {
+  margin-bottom:12px;
+}
+
+.inputText {
+  position:absolute;
+  font-family: 'Comfortaa', cursive;
+  left: 150px;
+  outline: none;
+  border:none;
+  border-bottom: 1px solid #111;
+  color: rgba(0,0,0,.8);
+  font-size:16px;
+}
+
+.acceptSection {
+  margin-bottom:20px;
+}
+
+.formBox {
+  height:20px;
+  width:20px;
+  position:relative;
+  top:5px;
+}
+
+.formHeader {
+  margin-top:-20px;
+}
+
+.formHeading {
+  padding-left: 15px;
+  font-size: 50px;
+  background-image:linear-gradient(120deg, rgba(63,130,215), rgba(128,0,128,.9) 25%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Righteous', cursive;
+  margin-bottom:10px;
+  line-height:60px;
+}
+
+.submitButton {
+  background-image:linear-gradient(120deg, purple, rgba(255,0,128,.9));
+  margin:auto;
+  display:flex;
+  width:180px;
+  height:60px;
+  color: #FFF;
+  font-size: 30px;
+  font-family: 'Righteous', cursive;
+  cursor:pointer;
+  border:none;
+  transform: scale(1);
+  justify-content:center;
+}
+
+.submitButton:hover {
+  transform: scale(1.1);
+}
+
+.logoImg {
+  position:absolute;
+  height: 250px;
+  width:auto;
+  top: -90px;
+  right: 10px;
+}
+
+.optionalSection {
+  height:50px;
+  width:300px;
+  background-color:#FFF;
+  position: relative;
+  left: 300px;
+  bottom:0px;
+}
+
+.changeButton {
+  border:none;
+  outline: none;
+  background-color: transparent;
+  font-family: 'Righteous', cursive;
+  background-image:linear-gradient(120deg, rgba(63,130,215), rgba(128,0,128,.9) 25%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor:pointer;
+  position:absolute;
+  right: 8px;
+  top: 12px;
+  font-size: 20px;
+  transform: scale(1);
+}
+
+.changeButton:hover {
+  transform: scale(1.1);
+}
+
+.sizeBack {
+  position:absolute;
+  left: 10px;
+  top: 18px;  
+}
+
+.boxShadow {
+  position:relative;
+  left: 300px;
+  bottom:50px;
+  height:50px;
+  width:300px;
+  box-shadow: 0 0 15px 5px rgba(0,0,0,.5);
+  z-index: -1;
+}
+
+.reSize {
+  width:600px;
+  height:340px;
+}
+
+#LoginForm {
+  display:none;
+  position:relative;
+}
+
+#RegisterForm {
+  display:none;
+  position:relative;
+}
+#AdminForm {
+  display:none;
+  position:relative;
+}
+
+.selectButton {
+  border:none;
+  outline: none;
+  height:70px;
+  width:200px;
+  margin-right:25px;
+  font-size:30px;
+  color:#FFF;
+  transform: scale(1);
+  cursor:pointer;
+  font-family: 'Righteous', cursive;
+}
+
+#SelectRegister {
+  background-image:linear-gradient(120deg, rgba(63,130,215), rgba(128,0,128,.9) 50%);
+}
+
+#SelectLogin {
+  background-image:linear-gradient(120deg, rgba(128,0,128,.9), rgba(255,0,128) 90%);
+}
+
+.selectButton:hover {
+  transform: scale(1.2);
+}
+
+.backBtn {
+  height:30px;
+  width:30px;
+  font-size:30px;
+  margin-right:10px;
+  background-color:transparent;
+  color:#111;
+  position:absolute;
+  top:0;
+  right:0;
+  z-index:1;
+  outline:none;
+  border:none;
+  transition: all 250ms ease-in-out;
+}
+
+.backBtn:hover {
+  opacity:0.2;
+  cursor:pointer;
+  color:gray;
+  transform: rotate(90deg);
+  margin-right:0;
+  margin-top:5px;
+}
+
+.pageHeader {
+  font-size: 50px;
+  color:azure;
+  font-family: 'Righteous', cursive;
+  text-align: center;
+}
+.selectButtonArea {
+  text-align: center;
+}

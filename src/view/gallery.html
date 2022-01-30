@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Photo Feed</title>
+        <link rel="stylesheet" href="../static/gallery.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>                     
+        <div class="main-menu">
+            <a class="header-link" href="/logout">Logout</a> 
+            <a class="header-link" href="/gallery/pendent">Pendent photos</a> 
+            <form style="display: flex; float: right;" class="upload-image-form" method="POST" 
+            action="/upload_image" enctype="multipart/form-data">
+            <p id="upload-image-filepath"></p>
+            <div class="upload-image btn">
+                <input type="file" name="file" multiple="true" autocomplete="off"
+                required>
+            </div>
+            <div class="upload-image-confirmation">
+                <input type="submit"d>
+            </div>
+            </form>                  
+        </div>
+        <h2 class="header-page">Feed</h2>
+        {% for image in images %}
+        <div class="container-fluid">
+            <div class="photo">
+                <div class="box one">
+                    <div class="name">
+                        <h3>{{ images[image]["image_owner"] }}</h3>
+                        <span>{{ images[image]["upload_date"] }}</span>
+                    </div>
+                    <img src="{{ images[image]["image_link"] }}" alt="">
+                    <div class="like-section">
+                        {% set image_hash = images[image]["image_hash"] %}
+                        {% set color_like = images[image]["liked"] %}
+                        <i class="fa fa-heart" style="font-size:30 px;color:{{color_like}}" onclick="likePost('{{current_user._id}}', '{{ image_hash }}', '{{ color_like }}')"></i>
+                        <i> {{ images[image]["likes"] }} likes</i>
+                    </div>
+                    <div class="comment-section">
+                        {% for comment in images[image]['comments'] %}
+                        <p> <b>{{ comment['user'] }}:</b> {{ comment['comment'] }}</p>
+                        {% endfor %}
+                    </div>
+                    
+                    <div class="comment-input" >
+                        {% set image_hash = images[image]["image_hash"] %}
+                        <input value="" placeholder="Comment.." id="Comment">
+                        <input class="commentButton" type="submit"d value="send" onclick="postComment('{{current_user.username}}', '{{ image_hash }}')">
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </body>
+<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../static/gallery.js"></script>
+
+</html>
