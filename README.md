@@ -85,7 +85,7 @@ Register user like on image and increment total likes of the image.
 
 ## How to run
 
-To run locally 
+First set variables of Dockerfile, then run: 
 
 ```bash
   docker build -t gallery:latest .
